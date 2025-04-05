@@ -1,0 +1,25 @@
+#Ejemplo
+""" 
+ a
+ el autor ignacio  
+ a
+
+"""
+print("hola mundo")
+
+# Variables
+
+edad: int = 23
+nombre: str = "ignacio"
+print("hola " + nombre + " tu edad es " + str(edad))
+
+altura: float = 1.65
+print(type(altura))
+permiso: bool = ( altura > 1.5 )
+
+if ((permiso > 1.5) and (edad > = 15)):
+    print("puedes subirte a la montaña rusa")
+else
+    print("no entras")
+
+print("fin de programa")

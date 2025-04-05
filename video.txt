@@ -1,0 +1,2 @@
+CURSO DE PYTHON - Cómo Generar Elementos y Números ALEATORIOS en PYTHON | Librería RANDOM 🐍
+donde aprendi para los numeros ramdom solo use los primeros minutos 

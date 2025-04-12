@@ -1,13 +1,13 @@
-# constantes
+# Constantes
 N: int = 5
 CANTIDAD_BARCOS: int = 3
 CANTIDAD_DISPAROS: int = 5
 
-# tableros
+# Tableros
 tablero_j1: list[list[bool]] = [[False for _ in range(N)] for _ in range(N)]
 tablero_j2: list[list[bool]] = [[False for _ in range(N)] for _ in range(N)]
 
-# Función para que un jugador ponga sus barcos
+# Función para que un jugador ponga los barcos
 def poner_barcos(jugador: int, tablero: list[list[bool]]):
     print("\nJugador " + str(jugador) + ", pone tus " + str(CANTIDAD_BARCOS) + " barcos.")
     barcos_puestos: int = 0
@@ -24,7 +24,7 @@ def poner_barcos(jugador: int, tablero: list[list[bool]]):
         else:
             print("Coordenadas fuera de rango.")
 
-# Función para mostrar un tablero (sin mostrar los barcos)
+# Función para mostrar un tablero 
 def mostrar_tablero(tablero: list[list[bool]]):
     for fila in tablero:
         print(" ".join("B" if celda else "~" for celda in fila))
@@ -39,14 +39,14 @@ def disparar(fila: int, columna: int, tablero: list[list[bool]], aciertos: int):
         print("AL AGUA.")
     return aciertos
 
-# colocar barcos
+# Poner barcos
 poner_barcos(1, tablero_j1)
 poner_barcos(2, tablero_j2)
 
 aciertos_j1 = 0
 aciertos_j2 = 0
 
-# disparo
+# Disparo
 for intento in range(CANTIDAD_DISPAROS):
     print("\nTurno del Jugador 1")
     fila = int(input("Fila: "))
@@ -64,19 +64,19 @@ for intento in range(CANTIDAD_DISPAROS):
     else:
         print("Coordenadas invalidas.")
 
-# resultados
+# Resultados
 print("\nFin.")
 print("Jugador 1 acerto: " + str(aciertos_j1))
 print("Jugador 2 acerto: " + str(aciertos_j2))
 
 if aciertos_j1 > aciertos_j2:
-    print("gano el jugador 1")
+    print("Gano el jugador 1")
 elif aciertos_j2 > aciertos_j1:
-    print("gano el jugador 1")
+    print("Gano el jugador 2")
 else:
-    print("empate")
+    print("Empate")
 
-# tableros finales
+# Tableros finales ALTO EXTRA
 print("\nTablero final del Jugador 1:")
 mostrar_tablero(tablero_j1)
 print("\nTablero final del Jugador 2:")

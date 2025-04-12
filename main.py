@@ -8,16 +8,16 @@ CANTIDAD_DISPAROS: int = 10
 # Tablero vacío
 tablero: list[list[bool]] = [[False for _ in range(N)] for _ in range(N)]  
 
-# Función para colocar los barcos en posiciones aleatorias
-def colocar_barcos():
-    barcos_colocados: int = 0
-    while barcos_colocados < CANTIDAD_BARCOS:
+# Función para poner los barcos en posiciones aleatorias
+def poner_barcos():
+    barcos_puestos: int = 0
+    while barcos_puestos < CANTIDAD_BARCOS:
         fila: int = random.randrange(0, N)
         columna: int = random.randrange(0, N)
         
         if tablero[fila][columna] == False:  
             tablero[fila][columna] = True
-            barcos_colocados += 1
+            barcos_puestos += 1
 
 # Mostrar el tablero final
 def mostrar_tablero():
@@ -25,7 +25,7 @@ def mostrar_tablero():
     for fila in tablero:
         print(" ".join("B" if celda else "~" for celda in fila))
 
-#  Disparar a una coordenada
+# Disparar a una coordenada
 def disparar(fila: int, columna: int, aciertos: int, fallos: int):
     if tablero[fila][columna]:  
         print("¡LE PEGASTE!")
@@ -38,13 +38,11 @@ def disparar(fila: int, columna: int, aciertos: int, fallos: int):
     return aciertos, fallos  
 
 # Iniciar el juego
-colocar_barcos()
+poner_barcos()
 print("Debes encontrar " + str(CANTIDAD_BARCOS) + " barcos ocultos en el tablero de " + str(N) + "x" + str(N))
-
 
 aciertos = 0
 fallos = 0
-
 
 for intento in range(CANTIDAD_DISPAROS):
     print("\nIntento " + str(intento + 1) + " de " + str(CANTIDAD_DISPAROS))
@@ -54,7 +52,7 @@ for intento in range(CANTIDAD_DISPAROS):
     columna = int(input("Ingresa la columna (0-" + str(N - 1) + "): "))
 
     # Validar que las coordenadas estén dentro del rango
-     if fila >= 0 and fila < N and columna >= 0 and columna < N:
+    if fila >= 0 and fila < N and columna >= 0 and columna < N:
         aciertos, fallos = disparar(fila, columna, aciertos, fallos)  
     else:
         print("Ingresa valores entre 0 y " + str(N - 1))

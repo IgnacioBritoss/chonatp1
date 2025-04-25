@@ -9,3 +9,5 @@ COLORAMA TUTORIAL
 
 El código crea un tablero de 10x10 (de 0 a 9 ) lleno de valores falsos que representan espacios vacíos. Luego, con una función, pone los 25 barcos en posiciones aleatorias dentro del tablero, marcando esas casillas como verdaderas. El jugador tiene 10 disparos para adivinar dónde están los barcos. En cada intento, se piden coordenadas, si hay un barco en esa posición, se cuenta como acierto y se elimina el barco de esa casilla. Si no hay barco, se cuenta como fallo. Al final del juego se muestran los resultados y se imprime el tablero con los barcos que no fueron descubiertos.
 
+https://youtu.be/x7X9w_GIm1s?si=GlA0uwl2e-fHCNBn
+Python in 100 Seconds

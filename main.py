@@ -39,7 +39,7 @@ def disparar(fila: int, columna: int, aciertos: int, fallos: int):
 
 # Iniciar el juego
 poner_barcos()
-print("Debes encontrar " + str(CANTIDAD_BARCOS) + " barcos ocultos en el tablero de " + str(N) + "x" + str(N))
+print("Tenes que encontrar " + str(CANTIDAD_BARCOS) + " barcos ocultos en el tablero de " + str(N) + "x" + str(N))
 
 aciertos = 0
 fallos = 0

@@ -28,11 +28,11 @@ def mostrar_tablero():
 # Disparar a una coordenada
 def disparar(fila: int, columna: int, aciertos: int, fallos: int):
     if tablero[fila][columna]:  
-        print("¡LE PEGASTE!")
+        print("LE PEGASTE")
         aciertos = aciertos + 1  
         tablero[fila][columna] = False  
     else:
-        print("AL AGUA.")
+        print("AL AGUA")
         fallos = fallos + 1  
     
     return aciertos, fallos  

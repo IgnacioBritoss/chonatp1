@@ -36,7 +36,7 @@ def disparar(fila: int, columna: int, tablero: list[list[bool]], aciertos: int):
         aciertos = aciertos + 1
         tablero[fila][columna] = False
     else:
-        print("AL AGUA.")
+        print("AL AGUA")
     return aciertos
 
 # Poner barcos
